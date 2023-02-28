@@ -93,7 +93,7 @@ background-color: rgb(217,194,165);
 
 
 @media screen and (max-width: 1200px) {
-    width: 330px;
+    width: 335px;
     display: flex ;
     flex-wrap: wrap;
     justify-content: center;
@@ -202,11 +202,12 @@ const Description = styled.p`
     display: flex ;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top:-10px;
     width: auto;
     margin: 5px;
     padding: 5px;
     height: 70px;
-    font-size: 1.2em;
+    font-size: 0.9em;
 }
 @media screen and (max-width: 665px) {
     display: flex ;
@@ -288,7 +289,7 @@ const Skills = styled.h2`
     justify-content: center;
     border: 1px solid rgb(0, 62, 128,0.7);
     border-radius: 10px;
-    font-size: 0.8em;
+    font-size: 0.7em;
     margin: 1px;
     padding: 6px
   }
@@ -301,7 +302,7 @@ const MemberComponent = ({img, name='', desc='',skills=[]}) => {
           <ImageContainer>
             <img width={300} src={img} alt={name} />
           </ImageContainer>
-          <div style={{ width: '95%', marginTop: '10px', display: 'flex', justifyContent: 'center', flexDirection: 'column', textAlign: 'center', border: '1px solid rgb(0,0,0,0.2)', borderRadius: '15px', boxShadow: '3px 7px 15px 2px rgba(0,0,0,0.3)', backgroundColor:'rgb(255,255,255,0.6)' }}>
+          <div style={{ width: '96%', marginTop: '10px', display: 'flex', justifyContent: 'center', flexDirection: 'column', textAlign: 'center', border: '1px solid rgb(0,0,0,0.2)', borderRadius: '15px', boxShadow: '3px 7px 15px 2px rgba(0,0,0,0.3)', backgroundColor:'rgb(255,255,255,0.6)' }}>
             <Name>{name}</Name>
             <Description>{desc}</Description>
           </div>
@@ -325,7 +326,7 @@ const ProjectsPage = () => {
         <a href="/nftpage" >
           <MemberComponent img={nftImg} dir="up" name="NFT Sales Tracker" desc="A personal project that tracks the top trending NFT sales using various API's." skills={["JavaScript","React","Node.js","Express.js","JSON Web Token","MySQL","Axios","Argon2","OAuth2","Full Stack"]} /></a>
           <a href="/stockpage">
-          <MemberComponent img={stockImg} dir="right" name="Stock Trading App" desc="A stock portfolio application that stores and updates user transactions with real-time stock quotes." skills={["Python","Flask","SQL","Jinja", "Full Stack","Responsive Design"]} /></a>
+          <MemberComponent img={stockImg} dir="right" name="Stock Trading App" desc="A stock portfolio application that stores user transactions with real-time stock quotes." skills={["Python","Flask","SQL","Jinja", "Full Stack","Responsive Design"]} /></a>
           <a href="/countrypage">
           <MemberComponent img={countryImg}  name="Country / Weather App" desc="A React application that displays country facts and weather forecasts using two APIs." skills={["JavaScript","React","Node.js","Express.js","Axios", "Full Stack","Responsive Design"]}  /></a>
           <a href="/phonebookpage">

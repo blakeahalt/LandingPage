@@ -19,8 +19,8 @@ function Devto() {
     
     return(
         <>
-        <div className='devto-container' >
         <Nav />
+        <div className='devto-container' >
             <div className="articles">
                 {articles.map((article) => {
                 return (

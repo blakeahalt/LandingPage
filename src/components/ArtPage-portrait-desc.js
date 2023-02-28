@@ -164,7 +164,7 @@ const About = () => {
         A collection of portrait art.
         </SubText>
         <SubText>
-        Traditional portrait art featuring jazz artists, kaleidoscopic backgrounds, and a glasshead series exploring the relationship between subject and mind.
+        Traditional portrait art featuring jazz artists, kaleidoscopic, and sacred geometric backgrounds.
         </SubText>
         <ButtonContainer>
         <Button text="See More" link='/art/portraits' />

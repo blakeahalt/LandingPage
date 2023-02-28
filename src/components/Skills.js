@@ -15,7 +15,7 @@ padding:10px;
 @media screen and (max-width: 1200px) {
   min-width: 100%;
   margin: 5px;
-  margin-left:-15px;
+  margin-left:-5px;
 }
 @media screen and (max-width: 665px) {
   width: 90%;
@@ -38,7 +38,7 @@ margin: 2px;
 @media screen and (max-width: 1200px) {
   align-items: center;
   border-radius: 10px;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 @media screen and (max-width: 665px) {
  
@@ -50,7 +50,7 @@ margin: 2px;
   width: auto;
   margin: 2px;
   padding: 4px;
-  font-size: 1em;
+  font-size: 0.9em;
 }
 `
 
@@ -76,11 +76,11 @@ const Icons = () => {
       <>
        <div className="skills-features" style={{ height: '400px', marginTop: '200px', marginBottom: '275px' }}>
         <h1 className="features-title" >Skills</h1>
-          <div className='skills-item-container' style={{width: '60%', height: '150px' }} >
+          <div className='skills-item-container' style={{width: '60%', height: '160px' }} >
             <div className="skills-title">Frontend Development</div>
                 <MemberComponent skills={["Javascript","React","HTML5","CSS","Bootstrap","React Router","Styled Components"]} />
             </div>
-          <div className='skills-item-container' style={{width: '60%', height: '150px' }} >
+          <div className='skills-item-container' style={{width: '60%', height: '160px' }} >
             <div className="skills-title">Backend Development</div>
             <MemberComponent skills={["Node.js","Express.js","Python","Flask","Jinja","SQL","MySQL","SQLite","MongoDB"]} />
           </div>

@@ -1,4 +1,8 @@
 import React, {useState} from 'react'
+import ImageGallery from 'react-image-gallery'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 import styled from 'styled-components';
 import Nav from './NavBar'
@@ -6,7 +10,15 @@ import Footer from './Footer'
 
 
 import Dizzy from '../assets/portraits/Dizzy_Done.png'
+import MilesDavis from '../assets/portraits/MilesDavis.png'
+import Thelonius from '../assets/portraits/Thelonius.png'
+import Mingus from '../assets/portraits/Mingus.png'
 import SaganTyson from '../assets/portraits/Sagan_tyson.png'
+import Ajumma from '../assets/portraits/Ajumma.png'
+import AjummaBase from '../assets/portraits/AjummaBase.png'
+import Ajussi from '../assets/portraits/Ajussi.png'
+import AjussiBase from '../assets/portraits/AjussiBase.png'
+import Glass1 from '../assets/portraits/Glass1.pdf'
 
 const Section = styled.section`
 display: flex;
@@ -96,7 +108,7 @@ background-color: rgb(204,145,29,0.1);
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  height: 475px;
+  height: 485px;
   margin: 10px;
 }
 }
@@ -106,7 +118,7 @@ background-color: rgb(204,145,29,0.1);
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  height: 445px;
+  height: 450px;
   }
 `
 
@@ -136,13 +148,13 @@ const ImageContainer = styled.div`
     border-radius: 25px;
   }
 
-  &:hover{
-    img{
-      transform: scale(1.25);
-      position: relative;
-      cursor: pointer;
-    }
-  }
+  // &:hover{
+  //   img{
+  //     transform: scale(1.25);
+  //     position: relative;
+  //     cursor: pointer;
+  //   }
+  // }
 
   @media screen and (max-width: 1200px) {
     margin: 7px;
@@ -170,15 +182,18 @@ color: rgb(0, 62, 128);
 @media screen and (max-width: 1200px) {
   margin: 7px;
   width: 300px;
+  font-size: 1.2em;
 }
 @media screen and (max-width: 665px) {
+  font-size: 1.2em;
   margin: 7px;
   width: 300px;
+  margin-top: 0px;
 }
 `
 
 const Description = styled.p`
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -187,6 +202,7 @@ const Description = styled.p`
 
 
   @media screen and (max-width: 1200px) {
+    font-size: 0.9em;
     display: flex ;
     flex-wrap: wrap;
     justify-content: center;
@@ -194,7 +210,37 @@ const Description = styled.p`
     margin: 5px;
   }
 @media screen and (max-width: 665px) {
+  font-size: 0.8em;
   display: flex ;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: auto;
+  margin: 17px;
+  height: 1em;
+  margin-top:0px;
+  margin-bottom:0px;
+}
+`
+
+const Description2 = styled.p`
+  font-size: 1em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: rgb(0, 62, 128);
+  margin-top: -15px;
+  opacity: 0.7;
+
+
+@media screen and (max-width: 1200px) {
+  display: flex ;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: auto;
+  margin: 5px;
+}
+@media screen and (max-width: 665px) {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: auto;
@@ -244,17 +290,18 @@ margin: 2px;
 }
 `
 
-const MemberComponent = ({img, name='', desc='',skills=[]}) => {
+const MemberComponent = ({ name='', desc='', desc2='', images}) => {
 
     const [isFullScreen, setIsFullScreen] = useState(false);
 
     const handleFullScreen = (e) => {
       const imageElement = e.target;
-      if (imageElement.requestFullscreen) {
+      if (imageElement.requestFullscreen && !imageElement.classList.contains('slick-next') || !imageElement.classList.contains('slick-prev') ) {
         imageElement.requestFullscreen();
         setIsFullScreen(true);
         document.addEventListener("fullscreenchange", handleFullScreenChange);
       }
+      e.preventDefault();
     };
 
     const handleFullScreenChange = () => {
@@ -270,20 +317,42 @@ const MemberComponent = ({img, name='', desc='',skills=[]}) => {
       }
     };
     
-    return(
-      <Item>
-        <ImageContainer style={{ maxWidth: 'auto' }}>
-          <a onClick={isFullScreen ? handleExitFullScreen : handleFullScreen} >
-            <img src={img} alt={name} style={{ maxWidth: '100%', maxHeight: '100%' }} />
-          </a>
-        </ImageContainer>
-        <div className='spiro-name-desc-container'>
-          <Name>{name}</Name>
-          <Description>{desc}</Description>
-        </div>
-      </Item>
-    )
-  }
+      const settings = {
+        dots: true,
+        infinite: false,     
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        touchMove: true,
+        outline: false,
+      };
+  
+      return (
+        <Item>
+          <ImageContainer >
+            <a onClick={isFullScreen ? handleExitFullScreen : handleFullScreen}>
+              {images.length === 1 ? (
+                <img src={images[0]} alt={name} className="ImageContainerSize" />
+              ) : (
+                <Slider className="SliderSettings" {...settings}>
+                  {images.map((image) => (
+                    <div key={image}>
+                      <img src={image} alt={name} className="SliderContainerSize" />
+                    </div>
+                  ))}
+                </Slider>
+              )}
+            </a>
+          </ImageContainer>
+          <div className="portrait-name-desc-container">
+            <Name>{name}</Name>
+            <Description>{desc}</Description>
+            <Description2>{desc2}</Description2>
+          </div>
+        </Item>
+      );
+    };
+    
 
 const ProjectCards = () => {
   return (
@@ -292,8 +361,14 @@ const ProjectCards = () => {
     <Section >
       <Container>
         <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', marginBottom:'25px' }}>
-          <MemberComponent img={Dizzy} name="Dizzy Gillespie" desc="pencil on paper"/>
-          <MemberComponent img={SaganTyson} name="Sagan Tyson" desc="Colored pencil on paper"/>
+          <MemberComponent images={[MilesDavis]} name="Miles Davis" desc="Mixed Media: Pencil on Paper, Digitally Edited."/>
+          <MemberComponent images={[Thelonius]} name="Thelonius Monk" desc="Mixed Media: Pencil on Paper, Digitally Edited."/>
+          <MemberComponent images={[Mingus]} name="Charles Mingus" desc="Mixed Media: Pencil on Paper, Digitally Edited."/>
+          <MemberComponent images={[Dizzy]} name="Dizzy Gillespie" desc="Mixed Media: Pencil on Paper, Digitally Edited."/>
+          <MemberComponent images={[Ajumma, AjummaBase]} name="Ajumma: Korean woman" desc="Mixed Media: Colored pencil, pencil on paper, and Digitally Edited"/>
+          <MemberComponent images={[Ajussi, AjussiBase]} name="Ajussi: Korean man" desc="Mixed Media: Colored pencil, pencil on paper, and Digitally Edited"/>
+          <MemberComponent style={{fontSize: '0.7em'}} images={[SaganTyson]} name="Cosmic Web: Seed of Life, Flower of Life, Metatron's Cube" desc="Mixed Media: Colored pencil, pencil on paper, and Digitally Edited"/>
+          {/* <MemberComponent img={Glass1} name="Glass Head 1" desc="pencil on paper"/> */}
         </div>
       </Container>
     </Section>

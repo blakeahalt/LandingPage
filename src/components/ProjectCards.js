@@ -205,6 +205,10 @@ color: rgb(0, 62, 128);
 width: 100%;
 min-height: 4.5vh;
 
+@media screen and (max-width: 1200px) {
+  margin-top: 5px;
+}
+
 `
 const Description = styled.p`
 font-size: .85em;
@@ -228,7 +232,7 @@ color: rgb(0, 62, 128);
   width: auto;
   height: 2em;
   margin: 17px;
-  margin-top: -3em;
+  margin-top: -1.5em;
   margin-bottom: 2em;
 }
 @media screen and (max-width: 665px) {

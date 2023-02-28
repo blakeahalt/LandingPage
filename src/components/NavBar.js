@@ -33,20 +33,18 @@ function Nav({ isWhite }) {
       {window.innerWidth < 665 ? (
         <>
           <div className={`nav-titles ${showNav ? 'show' : 'hide'}`}>
-            <Slide direction="right" when={showNav}>
               <div
                 style={{
                   backgroundColor: 'rgb(0,0,0,0.5)',
                   height: '99vh',
                   width: '250%',
-                  marginLeft: '-125%',
+                  marginLeft: '-150%',
                   borderRadius: '10px',
                   paddingTop: '10px',
                   marginTop:'18px',
                 }}
                 direction="right"
               >
-                <Slide direction="right" cascade damping={0.1} when={showNav}>
                 <div style={{marginBottom: '10px', fontSize: '1.4em'}}>
                   <a
                     className="navbar-title"
@@ -92,9 +90,7 @@ function Nav({ isWhite }) {
                     Resume
                   </a>
                 </div>
-              </Slide>
               </div>
-            </Slide>
           </div>
           <div className="menu-icon" onClick={() => setShowNav(!showNav)}>
             &#9776;

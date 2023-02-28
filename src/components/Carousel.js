@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 
 import { Pagination, Navigation, Autoplay, EffectCards } from "swiper";
 
-import Human from "../assets/Art/HumanHemi.jpg"
+import Human from "../assets/Art/HumanHemi.png"
 import Biggins from "../assets/Art/Biggins.png"
 import Chrysanthemum from "../assets/Art/Chrysanthemum.jpg"
 import Hydrangea from "../assets/Art/Hydrangea.jpg"
@@ -54,7 +54,7 @@ z-index: 1;
     width: 500px;
     height: 500px;
     margin-top: -15vh;
-    margin-left: 200px;
+    margin-left: 215px;
 }
 
 .swiper{

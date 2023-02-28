@@ -121,15 +121,15 @@ else {
           </div>
         </Parallax>
         <Parallax  >
-        <div style={{height: '800px', marginTop: '-275px', marginBottom: '-50px'}}>
+        <div style={{height: '800px', marginTop: '-250px', marginBottom: '0px'}}>
             <div className="boxs-title">
               <h2 style={{marginTop: '250px', marginBottom: '45px', color: 'rgb(0, 62, 128)' }}>About me:</h2>
               <div className="box-con">
                 <div style={{textAlign: 'left', maxWidth: 750, color: 'black', marginTop:-15, marginBottom: '2em'}}>
-                I spent ten years teaching English at elite after school programs in Thailand and South Korea, and 4 years teaching Kindergarten at a private elementary school in Pacific Palisades, CA. While teaching in CA, I also began volunteering at several machine learning, data science, and tech conferences in the Los Angeles area exploring my greater interest in the tech world. 
+                Building on nearly a decade of experience teaching and training English teachers in Thailand and South Korea, I continued my teaching journey in 2017 by teaching Kindergarten in Pacific Palisades, CA. While teaching, I developed a deep interest in the tech industry and started learning Python and Javascript. I also got involved in the field by volunteering at various tech conferences held throughout Los Angeles.
                 </div>
                 <div style={{textAlign: 'left', maxWidth: 750, color: 'black', marginTop:-15, marginBottom: '2em'}}>
-                Because of my continued interest in technology, passion to create things that solve real problems, and growth in technical skills, in 2021, I decided to transition from teaching to pursue a software development career.
+                Because of my continued interest in technology, passion to build things that solve real problems, and improving my technical skills, in 2021, I decided to transition from teaching to pursue a software development career. Although I will miss the classroom, I look forward to applying my teaching skills to new opportunities and challenges.
                 </div>
                 <div style={{textAlign: 'left', maxWidth: 750, color: 'black', marginTop:-15, marginBottom: '2em'}}>
                 See the full stack applications I've built in the Projects section, which have a description of each project and its features along with links to a demo and my github. Also be sure to check out my artwork and blog posts!

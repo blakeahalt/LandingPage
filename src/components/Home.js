@@ -36,14 +36,14 @@ justify-content: center;
 margin-left: auto;
 margin-right: auto;
 width: 350px;
-height: 500px;
+height: 525px;
 padding: 5px;
-
 
 .swiper{
     width: 100%;
-    height: 550px;
+    height: 575px;
     margin-top: 15px;
+
 }
 .swiper-pagination{
   text-align: right;
@@ -65,6 +65,7 @@ padding: 5px;
         width: 100%;
         height: auto;
         object-fit: cover;
+        
     }
 }
 
@@ -164,7 +165,7 @@ background-color: rgb(204,145,29,0.1);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  height: 285px;
+  height: 320px;
   min-width: 275px;
   margin: 5px;
   }
@@ -501,15 +502,15 @@ if (window.innerWidth > 1200) {
       <div  style={{ height: 800 }}>
         <div className='about-outside-container2'>
           <div className='about-dev-container2'>
-            <Slide  triggerOnce direction='down' delay={150} >
+            <Slide triggerOnce direction='down' delay={150} >
               <div className='dev-text-border2 '>
                 <div className='about-text2 '>
-                <Slide direction='down' delay={200}>
+                <Slide triggerOnce direction='down' delay={200}>
                     <h4 className="dev-introduction1-2 hidden" >
                       As a full stack developer, 
                     </h4>
                   </Slide>
-                  <Slide cascade direction='up' damping={0.35}>
+                  <Slide triggerOnce cascade direction='up' damping={0.35}>
                     <h4 className="dev-introduction1-2 hidden" style={{ marginTop: '-20px'}}>
                     I bring ideas to life with 
                     </h4>
@@ -556,12 +557,12 @@ if (window.innerWidth > 1200) {
              <Slide triggerOnce direction='down' delay={350}>
               <div className='dev-text-border2'>
                 <div className='about-text2' >
-                  <Slide direction='down' delay={400}>
+                  <Slide triggerOnce direction='down' delay={400}>
                     <h4 className="dev-introduction1-2 hidden">
                       As a former educator, 
                     </h4>
                   </Slide>
-                  <Slide cascade direction='up' damping={0.35}>
+                  <Slide triggerOnce cascade direction='up' damping={0.35}>
                     <h4 className="dev-introduction1-2 hidden" style={{ marginTop: '-20px'}}>
                       I convey information using 
                     </h4>
@@ -605,12 +606,12 @@ if (window.innerWidth > 1200) {
          <Slide triggerOnce direction='down' delay={550}>
             <div className='dev-text-border2'>
                 <div className='about-text2'>
-                <Slide direction='down' delay={400}>
+                <Slide triggerOnce direction='down' delay={400}>
                     <h4 className="dev-introduction1-2 hidden" >
                       As an artist, 
                     </h4>
                   </Slide>
-                  <Slide cascade direction='up' damping={0.35}>
+                  <Slide triggerOnce cascade direction='up' damping={0.35}>
                     <h4 className="dev-introduction1-2 hidden" style={{ marginTop: '-20px'}}>
                     I explore visual narratives 
                     </h4>
@@ -837,7 +838,7 @@ if (window.innerWidth > 1200) {
             <MemberComponent img={nftImg} dir="up" name="NFT Sales Tracker" desc="A personal project that tracks the top trending NFT sales using various API's." skills={["JavaScript","React","Node.js","express.js","JSON Web Token","MySQL","axios","argon2","OAuth2","full stack"]} /></a>
         </SwiperSlide>
         <SwiperSlide>  
-          <a href="/stockpage">
+            <a href="http://ssh%20root@82.180.136.248/stockpage">
             <MemberComponent img={stockImg} dir="right" name="Stock Trading App" desc="A stock portfolio that stores and updates user transactions with real-time stock quotes." skills={["Python","flask","SQL","jinja", "full stack","responsive design"]} /></a>
         </SwiperSlide>
         <SwiperSlide>  

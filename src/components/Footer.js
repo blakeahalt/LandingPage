@@ -36,8 +36,8 @@ function Footer () {
                 </a>
               </div>
             </div>
-            <div style={{display: 'flex', justifyContent: 'center', marginLeft: '-65px', paddingTop: '10px', fontSize: '0.9em', lineHeight: '1.4', color: 'rgb(0, 62, 128, 0.6)'}}>
-                <div style={{marginTop: '-10px'}}>
+            <div style={{display: 'flex', justifyContent: 'center', textAlign: 'center', paddingTop: '10px', fontSize: '0.9em', lineHeight: '1.4', color: 'rgb(0, 62, 128, 0.6)'}}>
+                <div style={{marginTop: '-10px', marginLeft: '-40px'}}>
                     <a href="#" style={{ fontSize: '1.2em' }}>
                         <FontAwesomeIcon icon={faArrowAltCircleUp} />
                         <div style={{ fontSize: '0.7em' }}>Back to top</div>
@@ -84,8 +84,8 @@ function Footer () {
                 </a>
               </div>
             </div>
-            <div style={{display: 'flex', justifyContent: 'center', marginLeft: '-65px', paddingTop: '10px', fontSize: '0.9em', lineHeight: '1.4', color: 'rgb(0, 62, 128, 0.6)'}}>
-                <div style={{marginTop: '-10px'}}>
+            <div style={{display: 'flex', justifyContent: 'center', paddingTop: '10px', textAlign: 'center',fontSize: '0.9em', lineHeight: '1.4', color: 'rgb(0, 62, 128, 0.6)'}}>
+            <div style={{marginTop: '-10px', marginLeft: '-60px'}}>
                     <a href="#" style={{ fontSize: '1.2em' }}>
                         <FontAwesomeIcon icon={faArrowAltCircleUp} />
                         <div style={{ fontSize: '0.7em' }}>Back to top</div>
@@ -130,8 +130,8 @@ function Footer () {
                 </a>
               </div>
             </div>
-            <div style={{display: 'flex', justifyContent: 'center', marginLeft: '-65px', paddingTop: '10px', fontSize: '0.9em', lineHeight: '1.4', color: 'rgb(0, 62, 128, 0.6)'}}>
-                <div style={{marginTop: '-10px'}}>
+            <div style={{display: 'flex', justifyContent: 'center', textAlign: 'center', paddingTop: '10px', fontSize: '0.9em', lineHeight: '1.4', color: 'rgb(0, 62, 128, 0.6)'}}>
+            <div style={{marginTop: '-10px', marginLeft: '-60px'}}>
                     <a href="#" style={{ fontSize: '1.2em' }}>
                         <FontAwesomeIcon icon={faArrowAltCircleUp} />
                         <div style={{ fontSize: '0.7em' }}>Back to top</div>

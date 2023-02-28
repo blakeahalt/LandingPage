@@ -10,10 +10,13 @@ import "swiper/css/navigation";
 
 import { Pagination, Navigation, Autoplay, EffectCards } from "swiper";
 
-import Human from "../assets/Art/HumanHemi.jpg"
-import Biggins from "../assets/Art/Biggins.png"
 import Dizzy from '../assets/portraits/Dizzy_Done.png'
+import MilesDavis from '../assets/portraits/MilesDavis.png'
+import Thelonius from '../assets/portraits/Thelonius.png'
+import Mingus from '../assets/portraits/Mingus.png'
 import SaganTyson from '../assets/portraits/Sagan_tyson.png'
+import Ajumma from '../assets/portraits/Ajumma.png'
+import Ajussi from '../assets/portraits/Ajussi.png'
 
 import Arrow from '../assets/Arrow.svg';
 
@@ -45,7 +48,7 @@ z-index: 1;
     width: 500px;
     height: 500px;
     margin-top: -15vh;
-    margin-left: 200px;
+    margin-left: 215px;
 }
 
 .swiper{
@@ -159,7 +162,12 @@ const Carousel = () => {
         
         className="mySwiper"
       >
+        <SwiperSlide>  <img width={500} height={400}  src={MilesDavis} alt="pic1" />   </SwiperSlide>
+        <SwiperSlide>  <img width={500} height={400}  src={Thelonius} alt="pic1" />   </SwiperSlide>
+        <SwiperSlide>  <img width={500} height={400}  src={Mingus} alt="pic1" />   </SwiperSlide>
         <SwiperSlide>  <img width={500} height={400}  src={Dizzy} alt="pic1" />   </SwiperSlide>
+        <SwiperSlide>  <img width={500} height={400}  src={Ajumma} alt="pic1" />   </SwiperSlide>
+        <SwiperSlide>  <img width={500} height={400}  src={Ajussi} alt="pic1" />   </SwiperSlide>
         <SwiperSlide>  <img width={500} height={400}  src={SaganTyson} alt="pic2" />   </SwiperSlide>
 
       </Swiper>
